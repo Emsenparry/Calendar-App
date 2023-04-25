@@ -1,0 +1,11 @@
+{
+    "name": "Calender App",
+    "short_name": "CalenderApp",
+    "description": "Calender that shows when next christmas is, or easter etc",
+    "start_url": "./index.html",
+    "id": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "orientation": "portrait"
+}
