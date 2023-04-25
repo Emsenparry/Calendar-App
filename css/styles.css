@@ -82,10 +82,26 @@ h2 {
   gap: 0.5em;
   display: grid;
   place-content: center;
+  position: relative;
 }
 
 img {
   max-width: 100%;
+}
+
+.container-plus{
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+.plus{
+  max-width: 10%;
+}
+.minus{
+  max-width: 13%;
+  position: absolute;
+  bottom: 88%;
+  left: 85%;
 }
 
 .cls-1 {
