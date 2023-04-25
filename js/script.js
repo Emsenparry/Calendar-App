@@ -1,19 +1,30 @@
-// Get the current date
-const today = new Date();
+const calcTimeDiff = date => {
+    const currentTime = new Date().getTime()
+    const futureTime = new Date(`${date} 00:00:00`).getTime()
+    const diffTime = (futureTime - currentTime) / 1000
+    const diffDays = Math.round(diffTime / 86400)
+    return diffDays;
+}
+console.log(`there are ${calcTimeDiff('2023-12-24')} left until Christmas`);
 
-// Get the year of the next Christmas
-const nextChristmasYear = today.getMonth() === 11 && today.getDate() > 25
-    ? today.getFullYear() + 1
-    : today.getFullYear();
 
-// Create a new Date object for the next Christmas
-const nextChristmas = new Date(nextChristmasYear, 11, 25);
+export const addCalender = (data, id) => {
+    const calenders = document.querySelector('.container');
 
-// Calculate the difference in milliseconds between today and next Christmas
-const timeDiff = nextChristmas.getTime() - today.getTime();
+    const html = `
+    <section class="container" data-id="${id}">
+          <div class="card">
+               <div class="brush">
+                    <h2>${data.title}</h2>
+                    <img src="/assets/images/img.png" alt="brush-stroke">
+                    <img class="minus" src="/assets/images/icons8-minus-96.png" alt="delete" data-id="${id}">
+               </div>
+               <div class="card-details">
+                    <h3>There are ${daysLeft} days left until ${data.title}</h3>
+               </div>
+          </div>
+     </section>  
+    `
+    calenders.innerHTML += html
+}
 
-// Calculate the number of days left until next Christmas
-const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
-// Output the result
-console.log(`There are ${daysLeft} days left until next Christmas`);

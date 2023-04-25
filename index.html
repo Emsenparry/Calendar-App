@@ -7,8 +7,8 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Calander-App</title>
      <link rel="stylesheet" href="/css/styles.css">
-     <script src="./js//script.js" defer></script>
-     <script src="./js/App.js" defer></script>
+     <script src="./js/script.js" type="module" defer></script>
+     <script src="./js/App.js" type="module" defer></script>
      <link rel="manifest" href="./manifest.json">
 </head>
 
@@ -38,6 +38,19 @@
           <img class="plus" src="/assets/images/icons8-plus-96.png" alt="add-new">
      </div>
 
+     <!-- Form -->
+     <form class="add-calender container section">
+          <h6>New Calender</h6>
+          <div class="divider"></div>
+          <div class="input-field">
+               <input placeholder="e.g. Summer Vacation" id="title" type="text" class="validate">
+               <label for="title">Calender Title</label>
+          </div>
+          <div class="input-field">
+               <input placeholder="e.g. 2023-08-21" id="date" type="text" class="validate">
+               <label for="date">Date</label>
+          </div>
+     </form>
 
      <!-- <span class="loader"></span> -->
 </body>

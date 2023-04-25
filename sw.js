@@ -1,6 +1,6 @@
-const staticCacheName = 'site-static-v1'
+const staticCacheName = 'site-static-v2'
 
-const dynamicCacheName = 'site-dynamic-v1'
+const dynamicCacheName = 'site-dynamic-v2'
 
 const assets = [
 	'/',
@@ -12,9 +12,6 @@ const assets = [
 	'./css/styles.css',
 	'./img.png'
 ]
-
-
-
 
 // Install Service Worker
 self.addEventListener('install', event => {
