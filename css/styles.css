@@ -1,47 +1,97 @@
 /* Colors */
-:root{
-     --primary: #492548;
-     --secondary: #AC92A1;
-     --title: #9FA58C;
-     --light: #BF95B9;
-     --pinkey: #B36b91;
-     --white: #fff;
-     --black: #101314
+:root {
+  --primary: #492548;
+  --secondary: #ac92a1;
+  --title: #9fa58c;
+  --light: #bf95b9;
+  --pinkey: #b36b91;
+  --white: #fff;
+  --black: #101314;
+  --background-color: #dbcbe0;
+  --text-color: #8d5083;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .loader {
-     display: block;
-     width: 84px;
-     height: 84px;
-     position: relative;
-   }
-   
-   .loader:before , .loader:after {
+  display: block;
+  width: 84px;
+  height: 84px;
+  position: relative;
+}
 
-     content: ""; color: var(--white);
-     position: absolute;
-     left: 50%;
-     bottom: 0;
-     top: 5em;
-     left: 5em;
-     width: 64px;
-     height: 64px;
-     border-radius: 50%;
-     background: var(--black);
-     transform: translate(-50% , -100%)  scale(0);
-     animation: push_401 2s infinite linear;
-   }
-   
-   .loader:after {
-     animation-delay: 1s;
-   }
-   
-   @keyframes push_401 {
-     0% , 50% {
-       transform: translate(-50% , 0%)  scale(1)
-     }
-   
-     100% {
-       transform: translate(-50%, -100%) scale(0)
-     }
-   }
+.loader:before,
+.loader:after {
+  content: "";
+  color: var(--white);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  top: 5em;
+  left: 5em;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--black);
+  transform: translate(-50%, -100%) scale(0);
+  animation: push_401 2s infinite linear;
+}
+
+.loader:after {
+  animation-delay: 1s;
+}
+
+@keyframes push_401 {
+  0%,
+  50% {
+    transform: translate(-50%, 0%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -100%) scale(0);
+  }
+}
+.container{
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 20px;
+  background: var(--background-color);
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  text-align: center;
+}
+h2 {
+  position: absolute;
+  color: var(--white);
+}
+.card-details {
+  color: var(--text-color);
+  height: 70%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cls-1 {
+  fill: #fff;
+}
+
+.cls-2 {
+  fill: url(#linear-gradient);
+}
